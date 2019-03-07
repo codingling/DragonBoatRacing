@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+<!--标题栏的设置部分-->
+    <RelativeLayout android:id ="@+id/top"
+            android:layout_width="match_parent"
+            android:layout_height="50dip"
+            android:background="@android:color/holo_blue_dark">
+    <ImageView
+            android:id="@+id/rl_more"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@android:color/holo_blue_dark"
+            android:paddingLeft="15dp"
+            android:paddingRight="5dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/setting"/>
+    </RelativeLayout>
+
+<!--游戏界面部分-->
+    <FrameLayout android:layout_below="@+id/top"
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent">
+
+        <view.BoatGamePlayingView
+                android:id="@+id/surfaceView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        <TextView
+                android:id="@+id/textScore"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                android:padding="15dp"
+                android:text="Game Start"
+                android:textColor="@android:color/holo_red_light"
+                android:textSize="16sp" />
+    </FrameLayout>
+
+</RelativeLayout>
